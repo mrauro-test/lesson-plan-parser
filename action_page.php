@@ -21,53 +21,60 @@ while ($line = fgets($fh)) {
     }
       }
 
+    function isClear($alpha, $bravo){
+      if (empty($alpha)){
+        echo ("<font face='arial'></font>");
+      }else {
+        echo "<font face='arial'><b>".'☐ '.$bravo."</b></font>"."<font face='arial'>".$alpha."</font>".'<br />';
+      }
+    }
+
 ?>
 
       <p style="color:black;font-family:arial;font-size:25px;font-weight:bold">Weekly Lesson Plans for Week <?php echo $weekOf ?></p>
       <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[8], $lineE[14], $lineE[20], $lineE[26], 'Monday:')?></p>
+<?php
 
-    <?php
-
-    echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[8] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[14] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[20] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Science:" . "</b></font>", "<font face='arial'>" . " " . $lineE[26] . "</font>" . '<br />';
+    echo isClear($lineE[8], 'English: ');
+    echo isClear($lineE[14], 'Math: ');
+    echo isClear($lineE[20], 'History: ');
+    echo isClear($lineE[26], 'Science: ');
 ?>
 
 <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[9], $lineE[15], $lineE[21], $lineE[27], 'Tuesday:')?></p>
 
   <?php
-    echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[9] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[15] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[21] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Science:" . "</b></font>", "<font face='arial'>" . " " . $lineE[27] . "</font>" . '<br />';
+    echo isClear($lineE[9], 'English: ');
+    echo isClear($lineE[15], 'Math: ');
+    echo isClear($lineE[21], 'History: ');
+    echo isClear($lineE[27], 'Science: ');
 ?>
 
 <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[10], $lineE[16], $lineE[22], $lineE[28], 'Thursday:')?></p>
   
     <?php
-    echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[10] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[16] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[22] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Science:" . "</b></font>", "<font face='arial'>" . " " . $lineE[28] . "</font>" . '<br />';
+    echo isClear($lineE[10], 'English: ');
+    echo isClear($lineE[16], 'Math: ');
+    echo isClear($lineE[22], 'History: ');
+    echo isClear($lineE[28], 'Science: ');
 ?>
 
 <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[11], $lineE[17], $lineE[23], $lineE[29], 'Wednesday:')?></p>
     
       <?php
-    echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[11] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[17] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[23] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Science:" . "</b></font>", "<font face='arial'>" . " " . $lineE[29] . "</font>" . '<br />';
+    echo isClear($lineE[11], 'English: ');
+    echo isClear($lineE[17], 'Math: ');
+    echo isClear($lineE[23], 'History: ');
+    echo isClear($lineE[29], 'Science: ');
 ?>
 
 <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[12], $lineE[18], $lineE[24], $lineE[30], 'Friday:')?></p>
       
         <?php
-    echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[12] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[18] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[24] . "</font>" . '<br />';
-    echo "<font face='arial'><b>" . "Science  :" . "</b></font>", "<font face='arial'>" . " " . $lineE[30] . "</font>" . '<br />';
+    echo isClear($lineE[12], 'English: ');
+    echo isClear($lineE[18], 'Math: ');
+    echo isClear($lineE[24], 'History: ');
+    echo isClear($lineE[30], 'Science: ');
 }
 fclose($fh);
 ?>
