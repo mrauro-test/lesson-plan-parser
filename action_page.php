@@ -13,16 +13,28 @@ while ($line = fgets($fh)) {
 ?>
 
       <p style="color:black;font-family:arial;font-size:25px;font-weight:bold">Weekly Lesson Plans for Week <?php echo $weekOf ?></p>
-      <p style="color:black;font-family:arial;font-size:20px;font-weight:bold">Monday <?php echo $daily[1] . "-" . $daily1 ?>:</p>
+      <p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[8], $lineE[14], $lineE[20], $lineE[26], 'Monday:')?></p>
 
     <?php
+
+    function isEmptyAll($alpha, $bravo, $carrot, $demi, $ellen){
+      if (empty($alpha.$bravo.$carrot.$demi)) {
+        echo ("<font face='arial'></font>");
+      }
+      else
+      {
+        echo ("<font face='arial'>".$ellen."</font>");
+      }
+    }
+
+
     echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[8] . "</font>" . '<br />';
     echo "<font face='arial'><b>" . "Math:" . "</b></font>", "<font face='arial'>" . " " . $lineE[14] . "</font>" . '<br />';
     echo "<font face='arial'><b>" . "History:" . "</b></font>", "<font face='arial'>" . " " . $lineE[20] . "</font>" . '<br />';
     echo "<font face='arial'><b>" . "Science  :" . "</b></font>", "<font face='arial'>" . " " . $lineE[26] . "</font>" . '<br />';
 ?>
 
-    <p style="color:black;font-family:arial;font-size:20px;font-weight:bold">Tuesday <?php echo $daily[1] . "-" . $daily2 ?>:</p>
+<p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[9], $lineE[15], $lineE[21], $lineE[27], 'Tuesday:')?></p>
 
   <?php
     echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[9] . "</font>" . '<br />';
@@ -31,7 +43,7 @@ while ($line = fgets($fh)) {
     echo "<font face='arial'><b>" . "Science  :" . "</b></font>", "<font face='arial'>" . " " . $lineE[27] . "</font>" . '<br />';
 ?>
 
-      <p style="color:black;font-family:arial;font-size:20px;font-weight:bold">Wednesday <?php echo $daily[1] . "-" . $daily3 ?>:</p>
+<p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[10], $lineE[16], $lineE[22], $lineE[28], 'Thursday:')?></p>
   
     <?php
     echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[10] . "</font>" . '<br />';
@@ -40,7 +52,7 @@ while ($line = fgets($fh)) {
     echo "<font face='arial'><b>" . "Science  :" . "</b></font>", "<font face='arial'>" . " " . $lineE[28] . "</font>" . '<br />';
 ?>
 
-        <p style="color:black;font-family:arial;font-size:20px;font-weight:bold">Thursday <?php echo $daily[1] . "-" . $daily4 ?>:</p>
+<p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($englishW, $mathW, $historyW, $scienceW, 'Wednesday:')?></p>
     
       <?php
     echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[11] . "</font>" . '<br />';
@@ -49,7 +61,7 @@ while ($line = fgets($fh)) {
     echo "<font face='arial'><b>" . "Science  :" . "</b></font>", "<font face='arial'>" . " " . $lineE[29] . "</font>" . '<br />';
 ?>
 
-          <p style="color:black;font-family:arial;font-size:20px;font-weight:bold">Friday <?php echo $daily[1] . "-" . $daily5 ?>:</p>
+<p style="color:black;font-family:arial;font-size:20px;font-weight:bold"><?php isEmptyAll($lineE[12], $lineE[18], $lineE[24], $lineE[30], 'Friday:')?></p>
       
         <?php
     echo "<font face='arial'><b>" . "English:" . "</b></font>", "<font face='arial'>" . " " . $lineE[12] . "</font>" . '<br />';
