@@ -10,3 +10,6 @@ To run it, CD to whereever you have the files at and run `php -S localhost:8000`
 
 This is a CSV form of my [Lesson Plan Organizer](https://github.com/MrAuro/lesson-plan-organizer).
 Built to help organize homework for school.
+
+To Do:
+Test everything
